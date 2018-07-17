@@ -36,7 +36,7 @@ public class FirstTest {
         inputWeatherField.sendKeys("погода пенза");
         WebElement buttonFind = driver.findElement(By.cssSelector("button[type='submit']"));
         buttonFind.click();
-        WebElement pogodaAssert = driver.findElement(By.cssSelector("a[href*=\"https://yandex.ru/pogoda/penza?from=serp_title\"] div[class='organic__url-text']"));
+        WebElement pogodaAssert = driver.findElement(By.cssSelector("li[data-cid="0"] div[class='organic__url-text']"));
         String actualString = pogodaAssert.getText();
         assertTrue(actualString.contains("Погода"));
     }
