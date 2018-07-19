@@ -10,9 +10,11 @@ public class MainPage {
     public MainPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
         this.driver = driver;
+        driver.get("https://ya.ru/");
     }
 
     public WebDriver driver;
+
 
     @FindBy(css = "input[id='text']")
     private WebElement weatherField;
