@@ -7,6 +7,7 @@ public class FirstTest extends ru.Ya.CreateCloseDriver {
     @Test
     public void checkTest() {
 
+        driver.get("https://ya.ru/");
         mainPage.inputWeatherField("Погода Пенза");
         mainPage.clickFindButton();
 
