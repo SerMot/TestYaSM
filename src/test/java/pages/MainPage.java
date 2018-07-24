@@ -25,6 +25,10 @@ public class MainPage {
     @FindBy(css = "li[data-cid=\"0\"] div[class='organic__url-text']")
     private WebElement weatherLink;
 
+    public void navigate(String URL) {
+    driver.get(URL);
+    System.out.println("Переход на страницу: " + URL);
+    }
 
     public void inputWeatherField(String text ) {
         weatherField.clear();
